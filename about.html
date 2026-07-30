@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Eventify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark">E</span>
+      <span>Eventify</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="host.html">Host</a>
+      <a href="about.html">About</a>
+      <a href="index.html#tickets">My Tickets</a>
+    </nav>
+    <div class="nav__right">
+      <div class="live-pulse" title="Live activity is streaming">
+        <span class="live-pulse__dot"></span> LIVE
+      </div>
+      <a class="btn btn--ghost" id="signInBtn" href="login.html">Sign in</a>
+      <div class="user-chip" id="userChip" hidden>
+        <span class="user-chip__avatar" id="userAvatar"></span>
+        <span class="user-chip__name" id="userName"></span>
+        <button class="user-chip__logout" id="logoutBtn" title="Log out">⏻</button>
+      </div>
+      <a class="btn btn--primary" href="host.html">Host an event</a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ ABOUT HERO ============ -->
+<section class="about-hero">
+  <div class="section-inner about-hero__inner">
+    <div>
+      <p class="eyebrow">About Eventify</p>
+      <h1 class="about-hero__title">Built for people<br>who actually show up.</h1>
+      <p class="about-hero__sub">Eventify is a booking and management platform for events worth leaving the house for — concerts, conferences, comedy nights, weekend leagues. No bloated checkout, no account wall before you can even browse. Just the room, who's in it, and a ticket that looks like one.</p>
+      <div class="about-hero__actions">
+        <a href="index.html#discover" class="btn btn--primary">Browse events</a>
+        <a href="host.html" class="btn btn--ghost">Host your own</a>
+      </div>
+    </div>
+    <div class="about-hero__stub-wrap">
+      <article class="ticket-stub about-stub perforated">
+        <div class="about-stub__band">
+          <span>ADMIT ONE</span>
+        </div>
+        <div class="about-stub__body">
+          <p class="about-stub__eyebrow">Est.</p>
+          <h3 class="about-stub__title">EVENTIFY</h3>
+          <p class="about-stub__meta">Every event · One stage</p>
+          <div class="about-stub__row">
+            <span>SEAT</span><span id="aboutStubSeat">GA</span>
+          </div>
+        </div>
+        <div class="barcode"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE STATS BAND ============ -->
+<section class="about-stats">
+  <div class="section-inner about-stats__row">
+    <div><strong id="statEvents">0</strong><span>events on the platform</span></div>
+    <div><strong id="statAttendees">0</strong><span>people going right now</span></div>
+    <div><strong id="statCities">0</strong><span>cities represented</span></div>
+    <div><strong>100%</strong><span>client-side &amp; open to browse</span></div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE DO ============ -->
+<section class="about-section">
+  <div class="section-inner">
+    <p class="eyebrow">What Eventify does</p>
+    <h2 class="about-section__title">From "what's on" to "I'm in", in four moves.</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-card__icon">🔎</div>
+        <h3>Discover</h3>
+        <p>Search, filter by city and category, sort by what matters — soonest, cheapest, or most talked-about.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🎟</div>
+        <h3>Book or RSVP</h3>
+        <p>Paid events get General and VIP tiers with a running total. Free events skip straight to a one-tap RSVP.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">📡</div>
+        <h3>Watch it live</h3>
+        <p>Seats and attendee counts move while you browse, with a heads-up the moment something is close to selling out.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">📣</div>
+        <h3>Host</h3>
+        <p>Sign in, fill in the details with a live preview of your ticket stub, and publish straight into the Discover feed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINCIPLES ============ -->
+<section class="about-section about-section--alt">
+  <div class="section-inner">
+    <p class="eyebrow">How we build</p>
+    <h2 class="about-section__title">A few things we don't compromise on.</h2>
+    <div class="principle-grid">
+      <div class="principle-card">
+        <span class="principle-card__num">01</span>
+        <h3>Design with intention</h3>
+        <p>No default dashboard template. The ticket-stub, the barcode, the perforated edge — every event on the platform looks like it belongs to the same show.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-card__num">02</span>
+        <h3>Nothing to set up</h3>
+        <p>Eventify runs entirely in your browser. There's no account wall between you and browsing, and no backend to provision before you can try it.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-card__num">03</span>
+        <h3>Live should feel live</h3>
+        <p>A seat counter that never moves isn't live, it's decoration. Ours updates while you watch, and tells you when it matters.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-card__num">04</span>
+        <h3>Free is a first-class flow</h3>
+        <p>Free events aren't a paid flow with the price hidden. They get their own simple, one-step RSVP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="section-inner cta__inner">
+    <div>
+      <h2>Ready to find your next night out?</h2>
+      <p>Or, if you've got something worth putting on — publish it in a couple of minutes.</p>
+    </div>
+    <div class="about-cta__actions">
+      <a href="index.html#discover" class="btn btn--primary">Browse events</a>
+      <a href="host.html" class="btn btn--ghost">Host an event</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">E</span>
+        <span>Eventify</span>
+      </a>
+      <p>Booking &amp; management for events worth leaving the house for.</p>
+      <div class="barcode" aria-hidden="true"></div>
+    </div>
+    <div class="footer__col">
+      <h4>Platform</h4>
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="host.html">Host an event</a>
+      <a href="#">Pricing</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+    </div>
+    <div class="footer__col">
+      <h4>Support</h4>
+      <a href="#">Help center</a>
+      <a href="login.html">Sign in</a>
+      <a href="#">Refund policy</a>
+    </div>
+  </div>
+  <div class="section-inner footer__bottom">
+    <span>© 2026 Eventify. All rights reserved.</span>
+    <span>Made for the ones who show up.</span>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="js/shared.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

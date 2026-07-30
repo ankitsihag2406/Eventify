@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventify — Every Event, One Stage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark">E</span>
+      <span>Eventify</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="host.html">Host</a>
+      <a href="about.html">About</a>
+      <a href="#tickets">My Tickets</a>
+    </nav>
+    <div class="nav__right">
+      <div class="live-pulse" title="Live activity is streaming">
+        <span class="live-pulse__dot"></span> LIVE
+      </div>
+      <a class="btn btn--ghost" id="signInBtn" href="login.html">Sign in</a>
+      <div class="user-chip" id="userChip" hidden>
+        <span class="user-chip__avatar" id="userAvatar"></span>
+        <span class="user-chip__name" id="userName"></span>
+        <button class="user-chip__logout" id="logoutBtn" title="Log out">⏻</button>
+      </div>
+      <a class="btn btn--primary" id="hostBtn" href="host.html">Host an event</a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow">Box office, reimagined</p>
+      <h1 class="hero__title">Every event,<br>one stage.</h1>
+      <p class="hero__sub">Find shows, conferences and meetups worth showing up for — book a ticket or RSVP in seconds, then watch the room fill up live.</p>
+
+      
+
+      <div class="hero__stats">
+        <div><strong id="statEvents">0</strong><span>live events</span></div>
+        <div><strong id="statAttendees">0</strong><span>going right now</span></div>
+        <div><strong id="statCities">0</strong><span>cities</span></div>
+      </div>
+    </div>
+
+    <div class="hero__stub-wrap">
+      <article class="ticket-stub ticket-stub--hero" id="featuredStub">
+        <!-- populated by JS -->
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE TICKER ============ -->
+<div class="ticker" aria-label="Live updates">
+  <div class="ticker__track" id="tickerTrack"></div>
+</div>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="categories" id="categories">
+  <div class="section-inner">
+    <div class="categories__row" id="categoryRow"></div>
+  </div>
+</section>
+
+<!-- ============ DISCOVER / EVENT GRID ============ -->
+<section class="discover" id="discover">
+  <div class="section-inner">
+    <div class="discover__head">
+      <div>
+        <p class="eyebrow">Discover</p>
+        <h2>Happening soon</h2>
+      </div>
+      <div class="discover__sort">
+        <label for="sortSelect">Sort by</label>
+        <select id="sortSelect">
+          <option value="soon">Soonest</option>
+          <option value="popular">Most popular</option>
+          <option value="price-low">Price: low to high</option>
+          <option value="price-high">Price: high to low</option>
+        </select>
+      </div>
+    </div>
+    <div class="event-grid" id="eventGrid"></div>
+  </div>
+</section>
+
+<!-- ============ MY TICKETS ============ -->
+<section class="my-tickets" id="tickets">
+  <div class="section-inner">
+    <p class="eyebrow">Your wallet</p>
+    <h2>My tickets &amp; RSVPs</h2>
+    <p class="my-tickets__sub">Booked passes live here — on this device — complete with a scannable stub.</p>
+    <div class="my-tickets__grid" id="myTicketsGrid">
+      <div class="empty-state" id="myTicketsEmpty">
+        <div class="empty-state__mark">🎟</div>
+        <p>No tickets yet. Book something below and it'll show up here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER / CTA ============ -->
+<section class="cta">
+  <div class="section-inner cta__inner">
+    <div>
+      <h2>Never miss the next big thing.</h2>
+      <p>One email a week. New shows, dropping tickets, and the events your friends are going to.</p>
+    </div>
+    <form class="cta__form" id="newsletterForm">
+      <input type="email" placeholder="you@email.com" required>
+      <button type="submit" class="btn btn--primary">Notify me</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">E</span>
+        <span>Eventify</span>
+      </a>
+      <p>Booking &amp; management for events worth leaving the house for.</p>
+      <div class="barcode" aria-hidden="true"></div>
+    </div>
+    <div class="footer__col">
+      <h4>Platform</h4>
+      <a href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="host.html">Host an event</a>
+      <a href="#">Pricing</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="login.html">Sign in</a>
+    </div>
+  <div class="section-inner footer__bottom">
+    <span>© 2026 Eventify. All rights reserved.</span>
+    <span>Made for the ones who show up.</span>
+  </div>
+</footer>
+
+<!-- ============ EVENT DETAIL MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="eventModal" role="dialog" aria-modal="true">
+    <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="js/shared.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

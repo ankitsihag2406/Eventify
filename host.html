@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Host an event — Eventify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark">E</span>
+      <span>Eventify</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="host.html">Host</a>
+      <a href="about.html">About</a>
+      <a href="index.html#tickets">My Tickets</a>
+    </nav>
+    <div class="nav__right">
+      <div class="live-pulse" title="Live activity is streaming">
+        <span class="live-pulse__dot"></span> LIVE
+      </div>
+      <a class="btn btn--ghost" id="signInBtn" href="login.html?redirect=host.html">Sign in</a>
+      <div class="user-chip" id="userChip" hidden>
+        <span class="user-chip__avatar" id="userAvatar"></span>
+        <span class="user-chip__name" id="userName"></span>
+        <button class="user-chip__logout" id="logoutBtn" title="Log out">⏻</button>
+      </div>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HOST AN EVENT ============ -->
+<section class="host">
+  <div class="section-inner">
+    <div class="host__head">
+      <p class="eyebrow">Host</p>
+      <h2>Put your event on the map</h2>
+      <p class="host__sub">Fill this in and it goes live in the Discover feed instantly — tickets, RSVP or paid tiers, all handled.</p>
+    </div>
+
+    <div id="hostArea">
+      <!-- populated by JS: either the sign-in gate or the host form -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (simplified) ============ -->
+<footer class="footer footer--simple">
+  <div class="section-inner footer__brand">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark">E</span>
+      <span>Eventify</span>
+    </a>
+    <p>Booking &amp; management for events worth leaving the house for.</p>
+    <div class="barcode" aria-hidden="true"></div>
+  </div>
+  <div class="section-inner footer__bottom">
+    <span>© 2026 Eventify. All rights reserved.</span>
+    <span>Made for the ones who show up.</span>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="js/shared.js"></script>
+<script src="js/host.js"></script>
+</body>
+</html>
